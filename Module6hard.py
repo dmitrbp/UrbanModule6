@@ -3,10 +3,7 @@ import math
 
 def _is_valid_color(r, g, b):
     its_color_num = lambda c: isinstance(c, int) and c in range(256)
-    if its_color_num(r) and its_color_num(g) and its_color_num(b):
-        return True
-    else:
-        return False
+    return its_color_num(r) and its_color_num(g) and its_color_num(b)
 
 
 class Figure:
