@@ -1,21 +1,15 @@
 class Horse:
     def __init__(self):
-        # Правильный вариант вызова конструктора родителя,
-        # но решение не совпадает с приведенным в примере
-        # super().__init__()
-
         self.x_distance = 0
         self.sound = 'Frrr'
 
-        # Неправильный вариант вызова конструктора родителя,
-        # но решение совпадает с приведенным в примере
-        super().__init__()
     def run(self, dx):
         self.x_distance += dx
 
 
 class Eagle:
     def __init__(self):
+        super().__init__()
         self.y_distance = 0
         self.sound = 'I train, eat, sleep, and repeat'
 
@@ -23,7 +17,7 @@ class Eagle:
         self.y_distance += dy
 
 
-class Pegasus(Horse, Eagle):
+class Pegasus(Eagle, Horse):
     def __init__(self):
         super().__init__()
 
