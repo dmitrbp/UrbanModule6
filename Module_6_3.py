@@ -22,11 +22,11 @@ class Pegasus(Eagle, Horse):
         super().__init__()
 
     def move(self, dx, dy):
-        super().run(dx)
-        super().fly(dy)
+        self.run(dx)
+        self.fly(dy)
 
     def get_pos(self):
-        return (self.x_distance, self.y_distance)
+        return self.x_distance, self.y_distance
 
     def voice(self):
         print(self.sound)
